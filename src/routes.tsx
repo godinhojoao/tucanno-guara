@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Header } from "./core/components/Header";
 import { HeaderContext } from "./core/context/HeaderContext";
 import { AllAnimals } from "./pages/AllAnimals";
+import { AnimalsByType } from "./pages/AnimalsByType";
 import { Home } from "./pages/Home";
 
 const RouteWithHeader = ({ children }: any): any => {
@@ -41,7 +42,17 @@ const AppRoutes = (): JSX.Element => {
             </RouteWithHeader>
           }
         />
-        {/* <Route path="/animais/:id" element={<Home />} /> */}
+
+        <Route
+          path="/animais/:type"
+          element={
+            <RouteWithHeader>
+              <AnimalsByType />
+            </RouteWithHeader>
+          }
+        />
+        {/* <Route path="/animais/:type" element={<Home />} /> */}
+        {/* <Route path="/animais/:type/:id" element={<Home />} /> */}
         {/* <Route path="/sobre" element={<Home />} /> */}
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>

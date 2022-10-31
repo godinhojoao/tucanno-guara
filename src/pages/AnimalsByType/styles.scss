@@ -1,4 +1,4 @@
-.all-animals {
+.animals-by-type {
   &__content {
     display: grid;
     grid-template-rows: repeat(6, 1fr);
@@ -15,7 +15,7 @@
 
       &__row {
         display: grid;
-        grid-template-columns: repeat(4, 1fr) .5fr;
+        grid-template-columns: repeat(4, 1fr);
         align-items: center;
         grid-gap: 2rem;
         margin-top: 1rem;

@@ -1,17 +1,14 @@
 import { useContext, useEffect, useId } from "react";
-import { useNavigate } from "react-router-dom";
 import { AnimalCard } from "../../core/components/AnimalCard";
 import { HeaderContext } from "../../core/context/HeaderContext";
 import { Animal } from "../../core/interfaces/Aninmal";
-import ChevronSvg from "./../../assets/icons/chevron.svg";
 
 import "./styles.scss";
 
-const AllAnimals = (): JSX.Element => {
-  const navigate = useNavigate();
+const AnimalsByType = (): JSX.Element => {
   const { handleChangeHeader } = useContext(HeaderContext);
   const homeHeaderParams = {
-    title: "Conheça os animais do pampa",
+    title: `Conheça --type-- do pampa`,
     subtitle: "Este é um site com fins educativos, sinta-se livre para explorar e aprender mais sobre os animais dos biomas brasileiros.",
   };
   const animals: Animal[] = [
@@ -46,15 +43,14 @@ const AllAnimals = (): JSX.Element => {
   }, []);
 
   return (
-    <main className="all-animals main">
-      <div className="all-animals__content main__content">
-        <div className="all-animals__content__type">
-          <h1 className="subtitle">Aves</h1>
-          <div className="all-animals__content__type__row">
+    <main className="animals-by-type main">
+      <div className="animals-by-type__content main__content">
+        <div className="animals-by-type__content__type">
+          <h1 className="subtitle">type here</h1>
+          <div className="animals-by-type__content__type__row">
             {animals.map((animal) => (
               <AnimalCard key={useId()} animal={animal} />
             ))}
-            <img className="clickable-icon" src={ChevronSvg} onClick={(): void => navigate(`/animais/aves`)}/>
           </div>
         </div>
       </div>
@@ -62,4 +58,4 @@ const AllAnimals = (): JSX.Element => {
   );
 };
 
-export { AllAnimals };
+export { AnimalsByType };
