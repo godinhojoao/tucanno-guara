@@ -1,0 +1,27 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  transition: filter 250ms;
+
+  &:hover {
+    filter: brightness(3);
+  }
+}
+
+input,
+textarea,
+button {
+  outline: none;
+}
