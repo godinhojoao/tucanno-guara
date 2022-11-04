@@ -28,43 +28,43 @@ const Home = (): JSX.Element => {
     {
       picture: "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
       name: "Sabiá-do-campo",
-      link: "/todos-animais",
       class: "aves",
+      id: 1
     },
     {
       picture:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
       name: "Sabiá-do-campo",
-      link: "###",
       class: "aves",
+      id: 1
     },
     {
       picture:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
       name: "Sabiá-do-campo",
-      link: "###",
       class: "aves",
+      id: 1
     },
     {
       picture:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
       name: "Sabiá-do-campo",
-      link: "###",
       class: "aves",
+      id: 1
     },
     {
       picture:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
       name: "Sabiá-do-campo",
-      link: "###",
       class: "aves",
+      id: 1
     },
     {
       picture:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
       name: "Sabiá-do-campo",
-      link: "###",
       class: "aves",
+      id: 1
     },
   ];
 

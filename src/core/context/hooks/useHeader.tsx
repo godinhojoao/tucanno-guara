@@ -11,7 +11,7 @@ export function useHeader(): HeaderContextProps {
 
   function handleChangeHeader(headerProps: HeaderProps): void {
     setTitle(headerProps.title);
-    setSubtitle(headerProps.subtitle);
+    setSubtitle(headerProps.subtitle || '');
     setHighlight(headerProps.highlight || '');
     setLinkToNavigate(headerProps.linkToNavigate);
   }

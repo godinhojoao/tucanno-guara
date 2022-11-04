@@ -11,7 +11,7 @@ const AnimalsByClass = (): JSX.Element => {
   const params = useParams();
   const navigate = useNavigate();
   const currentClassName = getCorrectClassName(params.class || "");
-  const homeHeaderParams = {
+  const animalsByClassHeaderParams = {
     title: "Conheça {{highlight}} do pampa",
     highlight: currentClassName,
     subtitle:
@@ -23,99 +23,99 @@ const AnimalsByClass = (): JSX.Element => {
       picture:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
       name: "Sabiá-do-campo",
-      class: "aves",
-      link: "/todos-animais",
+      id: 1,
+      class: "aves"
     },
     {
       picture:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
       name: "Sabiá-do-campo",
-      class: "aves",
-      link: "/todos-animais",
+      id: 1,
+      class: "aves"
     },
     {
       picture:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
       name: "Sabiá-do-campo",
-      class: "aves",
-      link: "###",
+      id: 1,
+      class: "aves"
     },
     {
       picture:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
       name: "Sabiá-do-campo",
-      class: "aves",
-      link: "###",
+      id: 1,
+      class: "aves"
     },
     {
       picture:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
       name: "Sabiá-do-campo",
-      class: "aves",
-      link: "###",
+      id: 1,
+      class: "aves"
     },
     {
       picture:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
       name: "Sabiá-do-campo",
-      class: "aves",
-      link: "###",
+      id: 1,
+      class: "aves"
     },
     {
       picture:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
       name: "Sabiá-do-campo",
-      class: "aves",
-      link: "###",
+      id: 1,
+      class: "aves"
     },
     {
       picture:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
       name: "Sabiá-do-campo",
-      class: "aves",
-      link: "###",
+      id: 1,
+      class: "aves"
     },
     {
       picture:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
       name: "Sabiá-do-campo",
-      class: "aves",
-      link: "###",
+      id: 1,
+      class: "aves"
     },
     {
       picture:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
       name: "Sabiá-do-campo",
-      class: "aves",
-      link: "###",
+      id: 1,
+      class: "aves"
     },
     {
       picture:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
       name: "Sabiá-do-campo",
-      class: "aves",
-      link: "###",
+      id: 1,
+      class: "aves"
     },
     {
       picture:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
       name: "Sabiá-do-campo",
-      class: "aves",
-      link: "###",
+      id: 1,
+      class: "aves"
     },
     {
       picture:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
       name: "Sabiá-do-campo",
-      class: "aves",
-      link: "###",
+      id: 1,
+      class: "aves"
     },
     {
       picture:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
       name: "Sabiá-do-campo",
-      class: "aves",
-      link: "###",
+      id: 1,
+      class: "aves"
     },
   ];
 
@@ -123,7 +123,7 @@ const AnimalsByClass = (): JSX.Element => {
     if (!currentClassName) {
       return navigate("/");
     }
-    handleChangeHeader(homeHeaderParams);
+    handleChangeHeader(animalsByClassHeaderParams);
   }, []);
 
   return (

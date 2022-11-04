@@ -17,8 +17,8 @@ body,
   align-items: end;
   flex-direction: column;
   color: map-get($colors, "primary");
-  background-image: url("./../assets/animals/onca.png"),
-    url("./../assets/icons/elipse.svg");
+  background-image: url("./../assets/onca.png"),
+    url("./../assets/elipse.svg");
   background-repeat: no-repeat, no-repeat;
   background-position-x: -8%, right;
   background-position-y: top, top;

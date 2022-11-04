@@ -5,6 +5,7 @@ import { HeaderContext } from "./core/context/HeaderContext";
 import { AllAnimals } from "./pages/AllAnimals";
 import { AnimalsByClass } from "./pages/AnimalsByClass";
 import { Home } from "./pages/Home";
+import { SpecificAnimal } from "./pages/SpecificAnimal";
 
 const RouteWithHeader = ({ children }: any): any => {
   const { title, subtitle, linkToNavigate, highlight } = useContext(HeaderContext);
@@ -62,14 +63,14 @@ const AppRoutes = (): JSX.Element => {
           }
         />
 
-        {/* <Route
+        <Route
           path="/animal/:id"
           element={
             <RouteWithHeader>
-            // specific animal page here
+              <SpecificAnimal />
             </RouteWithHeader>
           }
-        /> */}
+        />
 
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>

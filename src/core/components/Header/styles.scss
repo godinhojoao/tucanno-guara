@@ -20,6 +20,10 @@
     @extend .flex-align-end;
     justify-content: space-between;
 
+    div {
+      background-color: rebeccapurple;
+    }
+
     &__paragraph {
       @extend .paragraph;
       max-width: 50%;

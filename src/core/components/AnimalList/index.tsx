@@ -2,7 +2,7 @@ import { useId } from "react";
 import { useNavigate } from "react-router-dom";
 import { AnimalsListProps } from "../../interfaces/AnimalsListProps";
 import { AnimalCard } from "../AnimalCard";
-import ChevronSvg from "./../../../assets/icons/chevron.svg";
+import ChevronSvg from "./../../../assets/chevron.svg";
 
 import "./styles.scss";
 
