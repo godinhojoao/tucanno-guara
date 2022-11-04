@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { Animal } from "../../interfaces/Aninmal";
+import { Animal } from "../../interfaces/Animal";
 import ArrowSvg from "./../../../assets/icons/arrow.svg";
 
 import "./styles.scss";

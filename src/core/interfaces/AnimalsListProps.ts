@@ -2,6 +2,6 @@ import { Animal } from "./Animal";
 
 export interface AnimalsListProps {
   animals: Animal[];
-  title?: string;
+  title: string;
   withArrow?: boolean;
 }

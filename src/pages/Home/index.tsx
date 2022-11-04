@@ -3,7 +3,7 @@
 import { useContext, useEffect, useId } from "react";
 import { AnimalCard } from "../../core/components/AnimalCard";
 import { HeaderContext } from "../../core/context/HeaderContext";
-import { Animal } from "../../core/interfaces/Aninmal";
+import { Animal } from "../../core/interfaces/Animal";
 
 import "./styles.scss";
 
@@ -11,9 +11,10 @@ const Home = (): JSX.Element => {
   const { handleChangeHeader } = useContext(HeaderContext);
   const homeHeaderParams = {
     title: "Olá, seja bem vindo ao tucano-guará",
-    subtitle: "Este é um site com fins educativos, sinta-se livre para explorar e aprender mais sobre os animais dos biomas brasileiros.",
+    subtitle:
+      "Este é um site com fins educativos, sinta-se livre para explorar e aprender mais sobre os animais dos biomas brasileiros.",
     linkToNavigate: {
-      path: "/todos-animais",
+      path: "/animais",
       title: "Ver todos os animais",
     },
   };
@@ -25,40 +26,45 @@ const Home = (): JSX.Element => {
   // const { loading, error, data } = useQuery(GET_ANIMALS);
   const sixAnimals: Animal[] = [
     {
-      picture:
-        "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
+      picture: "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
       name: "Sabiá-do-campo",
       link: "/todos-animais",
+      class: "aves",
     },
     {
       picture:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
       name: "Sabiá-do-campo",
       link: "###",
+      class: "aves",
     },
     {
       picture:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
       name: "Sabiá-do-campo",
       link: "###",
+      class: "aves",
     },
     {
       picture:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
       name: "Sabiá-do-campo",
       link: "###",
+      class: "aves",
     },
     {
       picture:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
       name: "Sabiá-do-campo",
       link: "###",
+      class: "aves",
     },
     {
       picture:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
       name: "Sabiá-do-campo",
       link: "###",
+      class: "aves",
     },
   ];
 

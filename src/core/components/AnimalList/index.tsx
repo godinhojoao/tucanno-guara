@@ -12,8 +12,8 @@ const AnimalsList = (props: AnimalsListProps): JSX.Element => {
 
   return (
     <div className="animals-list">
-      {title && <h2 className="subtitle">{title}</h2>}
-      <div className="animals-list__row">
+      <h2 className="subtitle">{title}</h2>
+      <div className={`animals-list__row ${withArrow ? "animals-list__row--with-limit" : ""}`}>
         {animals.map((animal) => (
           <AnimalCard key={useId()} animal={animal} />
         ))}

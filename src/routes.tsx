@@ -3,17 +3,18 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Header } from "./core/components/Header";
 import { HeaderContext } from "./core/context/HeaderContext";
 import { AllAnimals } from "./pages/AllAnimals";
-import { AnimalsByType } from "./pages/AnimalsByType";
+import { AnimalsByClass } from "./pages/AnimalsByClass";
 import { Home } from "./pages/Home";
 
 const RouteWithHeader = ({ children }: any): any => {
-  const { title, subtitle, linkToNavigate } = useContext(HeaderContext);
+  const { title, subtitle, linkToNavigate, highlight } = useContext(HeaderContext);
 
   return (
     <>
       <Header
         title={title}
         subtitle={subtitle}
+        highlight={highlight}
         linkToNavigate={linkToNavigate}
       />
       {children}
@@ -34,8 +35,17 @@ const AppRoutes = (): JSX.Element => {
           }
         />
 
+        {/* <Route
+          path="/sobre"
+          element={
+            <RouteWithHeader>
+            // about page here
+            </RouteWithHeader>
+          }
+        /> */}
+
         <Route
-          path="todos-animais"
+          path="/animais"
           element={
             <RouteWithHeader>
               <AllAnimals />
@@ -44,16 +54,23 @@ const AppRoutes = (): JSX.Element => {
         />
 
         <Route
-          path="/animais/:type"
+          path="/animais/:class"
           element={
             <RouteWithHeader>
-              <AnimalsByType />
+              <AnimalsByClass />
             </RouteWithHeader>
           }
         />
-        {/* <Route path="/animais/:type" element={<Home />} /> */}
-        {/* <Route path="/animais/:type/:id" element={<Home />} /> */}
-        {/* <Route path="/sobre" element={<Home />} /> */}
+
+        {/* <Route
+          path="/animal/:id"
+          element={
+            <RouteWithHeader>
+            // specific animal page here
+            </RouteWithHeader>
+          }
+        /> */}
+
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </BrowserRouter>

@@ -8,6 +8,10 @@
   &__title {
     @extend .main-title;
     max-width: 80%;
+
+    &__highlight {
+      color: orange;
+    }
   }
 
   &__footer {
