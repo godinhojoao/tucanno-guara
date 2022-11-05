@@ -5,7 +5,7 @@ import { HeaderProps } from "../../core/interfaces/props/HeaderProps";
 
 import "./styles.scss";
 
-const SpecificAnimal = (): JSX.Element => {
+const SpecificAnimalPage = (): JSX.Element => {
   const { handleChangeHeader } = useContext(HeaderContext);
   const animal: SpecificAnimal = {
     imageUrl:
@@ -46,6 +46,7 @@ const SpecificAnimal = (): JSX.Element => {
 
   useEffect(() => {
     handleChangeHeader(specificAnimalHeaderParams);
+    return (): void => rootElement?.classList.remove('tucano-image');
   }, []);
 
   return (
@@ -63,4 +64,4 @@ const SpecificAnimal = (): JSX.Element => {
   );
 };
 
-export { SpecificAnimal };
+export { SpecificAnimalPage };

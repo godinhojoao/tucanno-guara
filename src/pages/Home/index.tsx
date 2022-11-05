@@ -8,7 +8,7 @@ import { HeaderProps } from "../../core/interfaces/props/HeaderProps";
 
 import "./styles.scss";
 
-const Home = (): JSX.Element => {
+const HomePage = (): JSX.Element => {
   const { handleChangeHeader } = useContext(HeaderContext);
   const homeHeaderParams: HeaderProps = {
     title: "Olá, seja bem vindo ao {{highlight}}",
@@ -88,4 +88,4 @@ const Home = (): JSX.Element => {
   );
 };
 
-export { Home };
+export { HomePage };

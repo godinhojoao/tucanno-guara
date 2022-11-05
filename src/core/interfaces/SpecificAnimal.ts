@@ -14,6 +14,6 @@ export interface SpecificAnimal extends Animal {
   locationDescription: string;
 
   // ver onde usar
-  biome: AnimalBiomes;
-  mediumHeightMeters: number;
+  biome?: AnimalBiomes;
+  mediumHeightMeters?: number;
 }

@@ -2,10 +2,10 @@ import { useContext } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Header } from "./core/components/Header";
 import { HeaderContext } from "./core/context/HeaderContext";
-import { AllAnimals } from "./pages/AllAnimals";
-import { AnimalsByClass } from "./pages/AnimalsByClass";
-import { Home } from "./pages/Home";
-import { SpecificAnimal } from "./pages/SpecificAnimal";
+import { AllAnimalsPage } from "./pages/AllAnimals";
+import { AnimalsByClassPage } from "./pages/AnimalsByClass";
+import { HomePage } from "./pages/Home";
+import { SpecificAnimalPage } from "./pages/SpecificAnimal";
 
 const RouteWithHeader = ({ children }: any): any => {
   const { title, subtitle, linkToNavigate, highlight, animal } = useContext(HeaderContext);
@@ -32,7 +32,7 @@ const AppRoutes = (): JSX.Element => {
           path="/"
           element={
             <RouteWithHeader>
-              <Home />
+              <HomePage />
             </RouteWithHeader>
           }
         />
@@ -50,7 +50,7 @@ const AppRoutes = (): JSX.Element => {
           path="/animais"
           element={
             <RouteWithHeader>
-              <AllAnimals />
+              <AllAnimalsPage />
             </RouteWithHeader>
           }
         />
@@ -59,7 +59,7 @@ const AppRoutes = (): JSX.Element => {
           path="/animais/:class"
           element={
             <RouteWithHeader>
-              <AnimalsByClass />
+              <AnimalsByClassPage />
             </RouteWithHeader>
           }
         />
@@ -68,7 +68,7 @@ const AppRoutes = (): JSX.Element => {
           path="/animal/:id"
           element={
             <RouteWithHeader>
-              <SpecificAnimal />
+              <SpecificAnimalPage />
             </RouteWithHeader>
           }
         />

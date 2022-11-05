@@ -6,7 +6,7 @@ import { HeaderProps } from "../../core/interfaces/props/HeaderProps";
 
 import "./styles.scss";
 
-const AllAnimals = (): JSX.Element => {
+const AllAnimalsPage = (): JSX.Element => {
   const { handleChangeHeader } = useContext(HeaderContext);
   const allAnimalsHeaderParams: HeaderProps = {
     title: "Conheça os animais do pampa",
@@ -216,4 +216,4 @@ const AllAnimals = (): JSX.Element => {
   );
 };
 
-export { AllAnimals };
+export { AllAnimalsPage };

@@ -8,7 +8,7 @@ import { HeaderProps } from "../../core/interfaces/props/HeaderProps";
 
 import "./styles.scss";
 
-const AnimalsByClass = (): JSX.Element => {
+const AnimalsByClassPage = (): JSX.Element => {
   const params = useParams();
   const navigate = useNavigate();
   const currentClassName = getCorrectClassName(params.class || "");
@@ -136,4 +136,4 @@ const AnimalsByClass = (): JSX.Element => {
   );
 };
 
-export { AnimalsByClass };
+export { AnimalsByClassPage };
