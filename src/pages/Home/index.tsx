@@ -26,43 +26,43 @@ const Home = (): JSX.Element => {
   // const { loading, error, data } = useQuery(GET_ANIMALS);
   const sixAnimals: Animal[] = [
     {
-      picture: "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      name: "Sabiá-do-campo",
+      imageUrl: "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
+      popularName: "Sabiá-do-campo",
       class: "aves",
       id: 1
     },
     {
-      picture:
+      imageUrl:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      name: "Sabiá-do-campo",
+      popularName: "Sabiá-do-campo",
       class: "aves",
       id: 1
     },
     {
-      picture:
+      imageUrl:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      name: "Sabiá-do-campo",
+      popularName: "Sabiá-do-campo",
       class: "aves",
       id: 1
     },
     {
-      picture:
+      imageUrl:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      name: "Sabiá-do-campo",
+      popularName: "Sabiá-do-campo",
       class: "aves",
       id: 1
     },
     {
-      picture:
+      imageUrl:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      name: "Sabiá-do-campo",
+      popularName: "Sabiá-do-campo",
       class: "aves",
       id: 1
     },
     {
-      picture:
+      imageUrl:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      name: "Sabiá-do-campo",
+      popularName: "Sabiá-do-campo",
       class: "aves",
       id: 1
     },

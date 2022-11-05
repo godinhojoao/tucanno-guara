@@ -14,180 +14,180 @@ const AllAnimals = (): JSX.Element => {
   };
   const birds: Animal[] = [
     {
-      picture:
+      imageUrl:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      name: "Sabiá-do-campo",
+      popularName: "Sabiá-do-campo",
       id: 1,
       class: "aves"
     },
     {
-      picture:
+      imageUrl:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      name: "Sabiá-do-campo",
+      popularName: "Sabiá-do-campo",
       id: 1,
       class: "aves"
     },
     {
-      picture:
+      imageUrl:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      name: "Sabiá-do-campo",
+      popularName: "Sabiá-do-campo",
       id: 1,
       class: "aves"
     },
     {
-      picture:
+      imageUrl:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      name: "Sabiá-do-campo",
+      popularName: "Sabiá-do-campo",
       id: 1,
       class: "aves"
     },
   ];
   const amphibians: Animal[] = [
     {
-      picture:
+      imageUrl:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      name: "Sabiá-do-campo",
+      popularName: "Sabiá-do-campo",
       id: 1,
       class: "aves"
     },
     {
-      picture:
+      imageUrl:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      name: "Sabiá-do-campo",
+      popularName: "Sabiá-do-campo",
       id: 1,
       class: "aves"
     },
     {
-      picture:
+      imageUrl:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      name: "Sabiá-do-campo",
+      popularName: "Sabiá-do-campo",
       id: 1,
       class: "aves"
     },
     {
-      picture:
+      imageUrl:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      name: "Sabiá-do-campo",
+      popularName: "Sabiá-do-campo",
       id: 1,
       class: "aves"
     },
   ];
   const fishs: Animal[] = [
     {
-      picture:
+      imageUrl:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      name: "Sabiá-do-campo",
+      popularName: "Sabiá-do-campo",
       id: 1,
       class: "aves"
     },
     {
-      picture:
+      imageUrl:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      name: "Sabiá-do-campo",
+      popularName: "Sabiá-do-campo",
       id: 1,
       class: "aves"
     },
     {
-      picture:
+      imageUrl:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      name: "Sabiá-do-campo",
+      popularName: "Sabiá-do-campo",
       id: 1,
       class: "aves"
     },
     {
-      picture:
+      imageUrl:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      name: "Sabiá-do-campo",
+      popularName: "Sabiá-do-campo",
       id: 1,
       class: "aves"
     },
   ];
   const reptiles: Animal[] = [
     {
-      picture:
+      imageUrl:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      name: "Sabiá-do-campo",
+      popularName: "Sabiá-do-campo",
       id: 1,
       class: "aves"
     },
     {
-      picture:
+      imageUrl:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      name: "Sabiá-do-campo",
+      popularName: "Sabiá-do-campo",
       id: 1,
       class: "aves"
     },
     {
-      picture:
+      imageUrl:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      name: "Sabiá-do-campo",
+      popularName: "Sabiá-do-campo",
       id: 1,
       class: "aves"
     },
     {
-      picture:
+      imageUrl:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      name: "Sabiá-do-campo",
+      popularName: "Sabiá-do-campo",
       id: 1,
       class: "aves"
     },
   ];
   const mammals: Animal[] = [
     {
-      picture:
+      imageUrl:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      name: "Sabiá-do-campo",
+      popularName: "Sabiá-do-campo",
       id: 1,
       class: "aves"
     },
     {
-      picture:
+      imageUrl:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      name: "Sabiá-do-campo",
+      popularName: "Sabiá-do-campo",
       id: 1,
       class: "aves"
     },
     {
-      picture:
+      imageUrl:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      name: "Sabiá-do-campo",
+      popularName: "Sabiá-do-campo",
       id: 1,
       class: "aves"
     },
     {
-      picture:
+      imageUrl:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      name: "Sabiá-do-campo",
+      popularName: "Sabiá-do-campo",
       id: 1,
       class: "aves"
     },
   ];
   const invertebrates: Animal[] = [
     {
-      picture:
+      imageUrl:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      name: "Sabiá-do-campo",
+      popularName: "Sabiá-do-campo",
       id: 1,
       class: "aves"
     },
     {
-      picture:
+      imageUrl:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      name: "Sabiá-do-campo",
+      popularName: "Sabiá-do-campo",
       id: 1,
       class: "aves"
     },
     {
-      picture:
+      imageUrl:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      name: "Sabiá-do-campo",
+      popularName: "Sabiá-do-campo",
       id: 1,
       class: "aves"
     },
     {
-      picture:
+      imageUrl:
         "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      name: "Sabiá-do-campo",
+      popularName: "Sabiá-do-campo",
       id: 1,
       class: "aves"
     },

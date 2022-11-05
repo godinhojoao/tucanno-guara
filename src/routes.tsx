@@ -8,7 +8,7 @@ import { Home } from "./pages/Home";
 import { SpecificAnimal } from "./pages/SpecificAnimal";
 
 const RouteWithHeader = ({ children }: any): any => {
-  const { title, subtitle, linkToNavigate, highlight } = useContext(HeaderContext);
+  const { title, subtitle, linkToNavigate, highlight, animal } = useContext(HeaderContext);
 
   return (
     <>
@@ -17,6 +17,7 @@ const RouteWithHeader = ({ children }: any): any => {
         subtitle={subtitle}
         highlight={highlight}
         linkToNavigate={linkToNavigate}
+        animal={animal}
       />
       {children}
     </>

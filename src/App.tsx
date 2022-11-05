@@ -11,6 +11,9 @@ import "./styles/main.scss";
 // });
 
 function App(): JSX.Element {
+  // @ts-ignore:next-line
+  console.log('process.env.CMS_URI', process.env.CMS_URI);
+
   return (
     // <ApolloProvider client={client}>
     <HeaderProvider>

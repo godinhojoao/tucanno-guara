@@ -16,14 +16,17 @@ body,
   @extend .flex-both-end;
   align-items: end;
   flex-direction: column;
-  color: map-get($colors, "primary");
-  background-image: url("./../assets/onca.png"),
-    url("./../assets/elipse.svg");
+  color: map-get($colors, "primary-font");
+  background-image: url("./../assets/onca.png"), url("./../assets/elipse.svg");
   background-repeat: no-repeat, no-repeat;
   background-position-x: -8%, right;
   background-position-y: top, top;
   background-attachment: local, local;
   background-size: 27%, 7%;
+
+  &.tucano-image {
+    background-image: url("./../assets/tucano.png"), url("./../assets/elipse.svg");
+  }
 }
 
 .main {

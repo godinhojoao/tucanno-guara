@@ -1,4 +1,5 @@
 @import "./../../../styles/utilities";
+@import "./../../../styles/settings/settings.variables";
 
 .header {
   width: 80%;
@@ -10,7 +11,7 @@
     max-width: 80%;
 
     &__highlight {
-      color: orange;
+      color:  map-get($colors, "secondary");
     }
   }
 
@@ -20,8 +21,15 @@
     @extend .flex-align-end;
     justify-content: space-between;
 
-    div {
-      background-color: rebeccapurple;
+    &__animal-info {
+      display: flex;
+      flex-direction: column;
+      grid-gap: .2rem;
+      padding: .5rem 1rem;
+      font-weight: 700;
+      color: #fff;
+      border-radius: 1rem;
+      background-color: map-get($colors, "secondary");
     }
 
     &__paragraph {

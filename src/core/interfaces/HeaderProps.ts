@@ -1,3 +1,4 @@
+import { Animal } from "./Animal";
 import { DefaultLink } from "./DefaultLink";
 
 export interface HeaderProps {
@@ -5,4 +6,5 @@ export interface HeaderProps {
   subtitle?: string;
   highlight?: string;
   linkToNavigate?: DefaultLink;
+  animal?: Animal;
 }

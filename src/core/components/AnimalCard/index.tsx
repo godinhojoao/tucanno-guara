@@ -10,8 +10,8 @@ const AnimalCard = (props: { animal: Animal }): JSX.Element => {
 
   return (
     <div className="card">
-      <img className="card__image" src={animal.picture} alt={animal.name} />
-      <h3 className="card__title">{animal.name}</h3>
+      <img className="card__image" src={animal.imageUrl} alt={animal.popularName} />
+      <h3 className="card__title">{animal.popularName}</h3>
       <img className="card__arrow" src={ArrowSvg} onClick={(): void => navigate(`animal/${animal.id}`)}/>
     </div>
   );
