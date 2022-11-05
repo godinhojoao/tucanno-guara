@@ -1,25 +1,21 @@
-// import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
-// import env from './env.json';
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import { HeaderProvider } from "./core/context/HeaderContext";
 import { AppRoutes } from "./routes";
 
 import "./styles/main.scss";
 
-// const client = new ApolloClient({
-//   uri: env.CMS_URI,
-//   cache: new InMemoryCache(),
-// });
+const client = new ApolloClient({
+  uri: import.meta.env.VITE_CMS_URI,
+  cache: new InMemoryCache(),
+});
 
 function App(): JSX.Element {
-  // @ts-ignore:next-line
-  console.log('process.env.CMS_URI', process.env.CMS_URI);
-
   return (
-    // <ApolloProvider client={client}>
-    <HeaderProvider>
-      <AppRoutes />
-    </HeaderProvider>
-    // </ApolloProvider>
+    <ApolloProvider client={client}>
+      <HeaderProvider>
+        <AppRoutes />
+      </HeaderProvider>
+    </ApolloProvider>
   );
 }
 

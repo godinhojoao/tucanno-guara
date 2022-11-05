@@ -4,6 +4,7 @@ import { AnimalsList } from "../../core/components/AnimalList";
 import { HeaderContext } from "../../core/context/HeaderContext";
 import { getCorrectClassName } from "../../core/shared/getCorrectClassName";
 import { Animal } from "../../core/interfaces/Animal";
+import { HeaderProps } from "../../core/interfaces/props/HeaderProps";
 
 import "./styles.scss";
 
@@ -11,7 +12,7 @@ const AnimalsByClass = (): JSX.Element => {
   const params = useParams();
   const navigate = useNavigate();
   const currentClassName = getCorrectClassName(params.class || "");
-  const animalsByClassHeaderParams = {
+  const animalsByClassHeaderParams: HeaderProps = {
     title: "Conheça {{highlight}} do pampa",
     highlight: currentClassName,
     subtitle:

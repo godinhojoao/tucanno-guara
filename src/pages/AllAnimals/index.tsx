@@ -2,12 +2,13 @@ import { useContext, useEffect } from "react";
 import { AnimalsList } from "../../core/components/AnimalList";
 import { HeaderContext } from "../../core/context/HeaderContext";
 import { Animal } from "../../core/interfaces/Animal";
+import { HeaderProps } from "../../core/interfaces/props/HeaderProps";
 
 import "./styles.scss";
 
 const AllAnimals = (): JSX.Element => {
   const { handleChangeHeader } = useContext(HeaderContext);
-  const allAnimalsHeaderParams = {
+  const allAnimalsHeaderParams: HeaderProps = {
     title: "Conheça os animais do pampa",
     subtitle:
       "Este é um site com fins educativos, sinta-se livre para explorar e aprender mais sobre os animais dos biomas brasileiros.",

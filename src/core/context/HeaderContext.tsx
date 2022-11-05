@@ -1,5 +1,5 @@
 import { createContext, ReactNode } from "react";
-import { HeaderContextProps } from "../interfaces/HeaderContextProps";
+import { HeaderContextProps } from "../interfaces/props/HeaderContextProps";
 import { useHeader } from "./hooks/useHeader";
 
 const DEFAULT_VALUE = {

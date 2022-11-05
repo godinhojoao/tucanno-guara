@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Animal } from "../../interfaces/Animal";
 import { DefaultLink } from "../../interfaces/DefaultLink";
-import { HeaderContextProps } from "../../interfaces/HeaderContextProps";
-import { HeaderProps } from "../../interfaces/HeaderProps";
+import { HeaderContextProps } from "../../interfaces/props/HeaderContextProps";
+import { HeaderProps } from "../../interfaces/props/HeaderProps";
 
 export function useHeader(): HeaderContextProps {
   const [title, setTitle] = useState<string>("");

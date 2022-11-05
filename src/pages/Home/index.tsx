@@ -4,13 +4,15 @@ import { useContext, useEffect, useId } from "react";
 import { AnimalCard } from "../../core/components/AnimalCard";
 import { HeaderContext } from "../../core/context/HeaderContext";
 import { Animal } from "../../core/interfaces/Animal";
+import { HeaderProps } from "../../core/interfaces/props/HeaderProps";
 
 import "./styles.scss";
 
 const Home = (): JSX.Element => {
   const { handleChangeHeader } = useContext(HeaderContext);
-  const homeHeaderParams = {
-    title: "Olá, seja bem vindo ao tucano-guará",
+  const homeHeaderParams: HeaderProps = {
+    title: "Olá, seja bem vindo ao {{highlight}}",
+    highlight: 'Tucano-guará',
     subtitle:
       "Este é um site com fins educativos, sinta-se livre para explorar e aprender mais sobre os animais dos biomas brasileiros.",
     linkToNavigate: {

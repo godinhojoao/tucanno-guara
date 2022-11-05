@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { formatAnimalWeight } from "../../shared/formatAnimalWeight";
 import { getCorrectFoodTypeName } from "../../shared/getCorrectFoodTypeName";
 import { formatAnimalLifetime } from "../../shared/formatAnimalLifetime";
-import { HeaderProps } from "../../interfaces/HeaderProps";
+import { HeaderProps } from "../../interfaces/props/HeaderProps";
 
 import "./styles.scss";
 

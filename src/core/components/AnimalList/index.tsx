@@ -1,6 +1,6 @@
 import { useId } from "react";
 import { useNavigate } from "react-router-dom";
-import { AnimalsListProps } from "../../interfaces/AnimalsListProps";
+import { AnimalsListProps } from "../../interfaces/props/AnimalsListProps";
 import { AnimalCard } from "../AnimalCard";
 import ChevronSvg from "./../../../assets/chevron.svg";
 

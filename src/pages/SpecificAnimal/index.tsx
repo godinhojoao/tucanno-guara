@@ -1,14 +1,13 @@
 import { useContext, useEffect } from "react";
 import { HeaderContext } from "../../core/context/HeaderContext";
-import { Animal } from "../../core/interfaces/Animal";
+import { SpecificAnimal } from "../../core/interfaces/SpecificAnimal";
+import { HeaderProps } from "../../core/interfaces/props/HeaderProps";
 
 import "./styles.scss";
 
 const SpecificAnimal = (): JSX.Element => {
-  const rootElement = document.querySelector('#root');
-  rootElement?.classList.add('tucano-image');
   const { handleChangeHeader } = useContext(HeaderContext);
-  const animal: Animal = {
+  const animal: SpecificAnimal = {
     imageUrl:
       "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
     popularName: "Sabiá-do-campo",
@@ -37,11 +36,13 @@ const SpecificAnimal = (): JSX.Element => {
     Amazonas, e nas regiões Nordeste, Sudeste, Centro-oeste e Sul do
     Brasil, além do Uruguai, Paraguai, Argentina e Bolívia.`,
   };
-  const specificAnimalHeaderParams = {
+  const specificAnimalHeaderParams: HeaderProps = {
     title: "Conheça um pouco mais sobre o {{highlight}}",
     highlight: animal.popularName,
-    animal: animal,
+    animal: animal
   };
+  const rootElement = document.querySelector('#root');
+  rootElement?.classList.add('tucano-image');
 
   useEffect(() => {
     handleChangeHeader(specificAnimalHeaderParams);
