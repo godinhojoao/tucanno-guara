@@ -1,4 +1,6 @@
-export function getCorrectClassName(className: string): any {
+import { AnimalClasses } from "../interfaces/AnimalClasses";
+
+export function getCorrectClassName(className?: AnimalClasses): any {
   const acceptedClassesMapper: Object = {
     'aves': 'Aves',
     'anfibios': 'Anfíbios',
@@ -9,5 +11,5 @@ export function getCorrectClassName(className: string): any {
   };
 
   // @ts-ignore:next-line
-  return acceptedClassesMapper[className];
+  return className ? className : acceptedClassesMapper[className];
 }

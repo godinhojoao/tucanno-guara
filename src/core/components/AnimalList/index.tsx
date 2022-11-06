@@ -1,4 +1,3 @@
-import { useId } from "react";
 import { useNavigate } from "react-router-dom";
 import { AnimalsListProps } from "../../interfaces/props/AnimalsListProps";
 import { AnimalCard } from "../AnimalCard";
@@ -15,7 +14,7 @@ const AnimalsList = (props: AnimalsListProps): JSX.Element => {
       <h2 className="subtitle">{title}</h2>
       <div className={`animals-list__row ${withArrow ? "animals-list__row--with-limit" : ""}`}>
         {animals.map((animal) => (
-          <AnimalCard key={useId()} animal={animal} />
+          <AnimalCard key={animal.id} animal={animal} />
         ))}
         {withArrow && (
           <img

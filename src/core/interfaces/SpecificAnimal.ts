@@ -13,7 +13,7 @@ export interface SpecificAnimal extends Animal {
   reprodutionDescription: string;
   locationDescription: string;
 
-  // ver onde usar
+  // not in use yet
   biome?: AnimalBiomes;
   mediumHeightMeters?: number;
 }
