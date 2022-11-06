@@ -1,7 +1,7 @@
 import { AnimalClasses } from "./AnimalClasses";
 
 export interface Animal {
-  id: number;
+  id: string;
   imageUrl: string;
   popularName: string;
   class: AnimalClasses;

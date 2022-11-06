@@ -7,7 +7,7 @@ import { AnimalsByClassPage } from "./pages/AnimalsByClass";
 import { HomePage } from "./pages/Home";
 import { SpecificAnimalPage } from "./pages/SpecificAnimal";
 
-const RouteWithHeader = ({ children }: any): any => {
+const RouteWithHeader = ({ children }: any): JSX.Element => {
   const { title, subtitle, linkToNavigate, highlight, animal } = useContext(HeaderContext);
 
   return (

@@ -3,5 +3,5 @@ function kgToGrams(weightInKg: number): string {
 }
 
 export function formatAnimalWeight(animalWeightInKg: number): string {
-  return animalWeightInKg > 1 ? `${animalWeightInKg}kg` : kgToGrams(animalWeightInKg);
+  return animalWeightInKg >= 1 ? `${animalWeightInKg}kg` : kgToGrams(animalWeightInKg);
 }

@@ -1,7 +1,10 @@
 import { ApolloError } from "@apollo/client";
 import { Animal } from "../Animal";
 
-interface AnimalsByEachClass {
+export interface AnimalsByEachClassVariables {
+  lastCount: number;
+}
+export interface AnimalsByEachClass {
   birds: Animal[];
   fishs: Animal[];
   amphibians: Animal[];
@@ -9,12 +12,9 @@ interface AnimalsByEachClass {
   mammals: Animal[];
   reptiles: Animal[];
 }
-export interface AnimalsByEachClassData {
-  animals: AnimalsByEachClass[];
-}
 
 export interface AnimalsByEachClassResponse {
   loading: boolean;
   error?: ApolloError;
-  data?: AnimalsByEachClassData;
+  data?: AnimalsByEachClass;
 }

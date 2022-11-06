@@ -11,5 +11,5 @@ export function getCorrectClassName(className?: AnimalClasses): any {
   };
 
   // @ts-ignore:next-line
-  return className ? className : acceptedClassesMapper[className];
+  return className ? acceptedClassesMapper[className] : className;
 }

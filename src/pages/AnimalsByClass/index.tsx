@@ -3,16 +3,16 @@ import { useNavigate, useParams } from "react-router-dom";
 import { AnimalsList } from "../../core/components/AnimalList";
 import { HeaderContext } from "../../core/context/HeaderContext";
 import { getCorrectClassName } from "../../core/shared/getCorrectClassName";
-import { Animal } from "../../core/interfaces/Animal";
 import { HeaderProps } from "../../core/interfaces/props/HeaderProps";
 import { AnimalClasses } from "../../core/interfaces/AnimalClasses";
 
 import "./styles.scss";
+import { animalsApi } from "../../core/api/Api";
 
 const AnimalsByClassPage = (): JSX.Element => {
   const params = useParams();
   const navigate = useNavigate();
-  const currentClassName = getCorrectClassName(params.class as AnimalClasses || undefined);
+  const currentClassName = getCorrectClassName(params.class as AnimalClasses);
   const animalsByClassHeaderParams: HeaderProps = {
     title: "Conheça {{highlight}} do pampa",
     highlight: currentClassName,
@@ -20,106 +20,10 @@ const AnimalsByClassPage = (): JSX.Element => {
       "Este é um site com fins educativos, sinta-se livre para explorar e aprender mais sobre os animais dos biomas brasileiros.",
   };
   const { handleChangeHeader } = useContext(HeaderContext);
-  const animals: Animal[] = [
-    {
-      imageUrl:
-        "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      popularName: "Sabiá-do-campo",
-      id: 1,
-      class: "aves"
-    },
-    {
-      imageUrl:
-        "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      popularName: "Sabiá-do-campo",
-      id: 1,
-      class: "aves"
-    },
-    {
-      imageUrl:
-        "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      popularName: "Sabiá-do-campo",
-      id: 1,
-      class: "aves"
-    },
-    {
-      imageUrl:
-        "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      popularName: "Sabiá-do-campo",
-      id: 1,
-      class: "aves"
-    },
-    {
-      imageUrl:
-        "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      popularName: "Sabiá-do-campo",
-      id: 1,
-      class: "aves"
-    },
-    {
-      imageUrl:
-        "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      popularName: "Sabiá-do-campo",
-      id: 1,
-      class: "aves"
-    },
-    {
-      imageUrl:
-        "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      popularName: "Sabiá-do-campo",
-      id: 1,
-      class: "aves"
-    },
-    {
-      imageUrl:
-        "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      popularName: "Sabiá-do-campo",
-      id: 1,
-      class: "aves"
-    },
-    {
-      imageUrl:
-        "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      popularName: "Sabiá-do-campo",
-      id: 1,
-      class: "aves"
-    },
-    {
-      imageUrl:
-        "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      popularName: "Sabiá-do-campo",
-      id: 1,
-      class: "aves"
-    },
-    {
-      imageUrl:
-        "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      popularName: "Sabiá-do-campo",
-      id: 1,
-      class: "aves"
-    },
-    {
-      imageUrl:
-        "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      popularName: "Sabiá-do-campo",
-      id: 1,
-      class: "aves"
-    },
-    {
-      imageUrl:
-        "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      popularName: "Sabiá-do-campo",
-      id: 1,
-      class: "aves"
-    },
-    {
-      imageUrl:
-        "https://passarinhando.com.br/media/k2/items/cache/f8ea1c7aff521bedaac5eab4cbe3ce1e_XL.jpg",
-      popularName: "Sabiá-do-campo",
-      id: 1,
-      class: "aves"
-    },
-  ];
+  const { data } = animalsApi.loadAnimals({
+    lastCount: 5,
+    animalClass: params.class as AnimalClasses,
+  });
 
   useEffect(() => {
     if (!currentClassName) {
@@ -131,7 +35,7 @@ const AnimalsByClassPage = (): JSX.Element => {
   return (
     <main className="animals-by-class main">
       <div className="animals-by-class__content main__content">
-        <AnimalsList title={currentClassName} animals={animals} />
+        <AnimalsList title={currentClassName} animals={data?.animals} />
       </div>
     </main>
   );

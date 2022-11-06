@@ -12,7 +12,7 @@ const AnimalCard = (props: { animal: Animal }): JSX.Element => {
     <div className="card">
       <img className="card__image" src={animal.imageUrl} alt={animal.popularName} />
       <h3 className="card__title">{animal.popularName}</h3>
-      <img className="card__arrow" src={ArrowSvg} onClick={(): void => navigate(`animal/${animal.id}`)}/>
+      <img className="card__arrow" src={ArrowSvg} onClick={(): void => navigate(`/animal/${animal.id}`)}/>
     </div>
   );
 };

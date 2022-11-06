@@ -19,7 +19,6 @@ const HomePage = (): JSX.Element => {
     },
   };
   const { data } = animalsApi.loadAnimals({ lastCount: 5 });
-  console.log('data', data);
 
   useEffect(() => {
     handleChangeHeader(homeHeaderParams);
@@ -29,17 +28,10 @@ const HomePage = (): JSX.Element => {
     <main className="home main">
       <div className="home__content main__content">
         {data?.animals?.length && (
-          <>
-            <div className="home__content__animals">
-              {data.animals.map(animal => <AnimalCard key={animal.id} animal={animal} />)}
-            </div>
-            {/* <div className="home__content__animals">
-              {data.animals.splice(0, 3).map((animal: any) => (
-                <AnimalCard key={animal.id} animal={animal} />
-              ))}
-            </div>  */}
-          </>
-        )}
+          <div className="home__content__animals">
+            {data.animals.map(animal => <AnimalCard key={animal.id} animal={animal} />)}
+          </div>
+        ) || ''}
       </div>
     </main>
   );

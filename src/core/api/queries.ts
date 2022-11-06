@@ -45,15 +45,16 @@ export const SPECIFIC_ANIMAL_BY_ID = gql`
       id
       popularName
       scientificName
-      class
-      foodDescription
-      foodType
-      generalDescription
       imageUrl
-      isInExtinction
-      lifetimeInYears
+      class
+      foodType
+      foodDescription
+      generalDescription
       locationDescription
+      reprodutionDescription
+      isInExtinction
       mediumHeightMeters
+      lifetimeInYears
       mediumWeightKg
     }
   }
