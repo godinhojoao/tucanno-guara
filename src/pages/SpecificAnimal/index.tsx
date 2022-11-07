@@ -9,22 +9,21 @@ import "./styles.scss";
 const SpecificAnimalPage = (): JSX.Element => {
   const params = useParams();
   const { handleChangeHeader } = useContext(HeaderContext);
-
   const { data } = animalsApi.specificAnimalById(params?.id || "");
-  if (data?.animal) {
-    const specificAnimalHeaderParams: HeaderProps = {
-      title: "Conheça um pouco mais sobre o {{highlight}}",
-      highlight: data?.animal.popularName,
-      animal: data?.animal,
-    };
-    handleChangeHeader(specificAnimalHeaderParams);
-  }
 
   useEffect(() => {
     const rootElement = document.querySelector("#root");
     rootElement?.classList.add("tucano-image");
+
+    const specificAnimalHeaderParams: HeaderProps = {
+      title: "Conheça um pouco mais sobre o {{highlight}}",
+      highlight: data?.animal?.popularName,
+      animal: data?.animal,
+    };
+    handleChangeHeader(specificAnimalHeaderParams);
+
     return (): void => rootElement?.classList.remove("tucano-image");
-  }, []);
+  }, [data]);
 
   return (
     <main className="all-animals main">
