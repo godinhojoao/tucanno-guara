@@ -1,7 +1,7 @@
-import { formatAnimalLifetime } from "../../core/shared/formatAnimalLifetime";
+import { formatAnimalLifetime } from "../../../core/shared/formatAnimalLifetime";
 
 describe('formatAnimalLifetime', () => {
-  test('given 1 years should return "1 ano"', () => {
+  test('given 1 year should return "1 ano"', () => {
     expect(formatAnimalLifetime(1)).toBe('1 ano');
   });
 
