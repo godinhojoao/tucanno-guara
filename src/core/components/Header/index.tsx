@@ -8,7 +8,7 @@ import "./styles.scss";
 
 const Header = (props: HeaderProps): JSX.Element => {
   const { title, subtitle, highlight, linkToNavigate, animal } = props;
-  const [initialTitle, finalTitle] = title.split("{{highlight}}");
+  const [initialTitle, finalTitle] = title.split("__");
 
   return (
     <header className="header">

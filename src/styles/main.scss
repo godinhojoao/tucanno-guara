@@ -23,9 +23,11 @@ body,
   background-position-y: top, top;
   background-attachment: local, local;
   background-size: 27%, 7%;
+  transition: all 250ms ease-in-out;
 
   &.tucano-image {
     background-image: url("./../assets/tucano.png"), url("./../assets/elipse.svg");
+    background-size: 28%, 7%;
   }
 }
 
@@ -36,6 +38,26 @@ body,
 
   &__content {
     margin: 2rem 0;
-    min-height: 10rem;
+    min-height: 28rem;
+    transition: all 250ms ease-in-out;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+
+  &-track {
+    background-color: transparent;
+  }
+
+  &-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+
+    &:hover {
+      background-color: #a8bbbf;
+    }
   }
 }

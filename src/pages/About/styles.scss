@@ -1,0 +1,21 @@
+@import "./../../styles/utilities";
+
+.about__content {
+  margin-left: 2rem !important;
+  margin-top: 0 !important;
+
+  p {
+    line-height: 1.37rem;
+    font-size: 1.1rem;
+  }
+
+  &__subtitle {
+    margin-top: 1rem;
+  }
+
+  &__image {
+    height: 15rem;
+    width: 90%;
+    object-fit: contain;
+  }
+}

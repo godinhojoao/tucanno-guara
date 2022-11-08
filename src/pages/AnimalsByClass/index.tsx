@@ -14,7 +14,7 @@ const AnimalsByClassPage = (): JSX.Element => {
   const navigate = useNavigate();
   const currentClassName = getCorrectClassName(params.class as AnimalClasses);
   const animalsByClassHeaderParams: HeaderProps = {
-    title: "Conheça {{highlight}} do pampa",
+    title: "Conheça __ do pampa",
     highlight: currentClassName,
     subtitle:
       "Este é um site com fins educativos, sinta-se livre para explorar e aprender mais sobre os animais dos biomas brasileiros.",

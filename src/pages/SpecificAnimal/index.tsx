@@ -18,7 +18,7 @@ const SpecificAnimalPage = (): JSX.Element => {
     rootElement?.classList.add("tucano-image");
 
     const specificAnimalHeaderParams: HeaderProps = {
-      title: "Conheça um pouco mais sobre o {{highlight}}",
+      title: "Conheça um pouco mais sobre o __",
       highlight: data?.animal?.popularName,
       animal: data?.animal,
     };
@@ -43,7 +43,7 @@ const SpecificAnimalPage = (): JSX.Element => {
             <p><strong>Alimentação</strong>: {data.animal.foodDescription}</p>
             <p><strong>Reprodução</strong>: {data.animal.reprodutionDescription}</p>
             <p><strong>Localização</strong>: {data.animal.locationDescription}</p>
-            {data.animal.biomes?.length && <p><strong>Biomas:</strong>: {formatAnimalBiomes(data.animal.biomes)}</p>}
+            {data.animal.biomes?.length && (<p><strong>Biomas:</strong>: {formatAnimalBiomes(data.animal.biomes)}</p>) || ''}
             <p><strong>Quem pesquisou o animal:</strong> {data.animal.whoSearched}</p>
           </>
         ) || ''}

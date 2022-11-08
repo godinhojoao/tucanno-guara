@@ -9,7 +9,7 @@ import "./styles.scss";
 const HomePage = (): JSX.Element => {
   const { handleChangeHeader } = useContext(HeaderContext);
   const homeHeaderParams: HeaderProps = {
-    title: "Olá, seja bem vindo ao {{highlight}}",
+    title: "Olá, seja bem vindo ao __",
     highlight: "Tucano-guará",
     subtitle:
       "Este é um site com fins educativos, sinta-se livre para explorar e aprender mais sobre os animais dos biomas brasileiros.",

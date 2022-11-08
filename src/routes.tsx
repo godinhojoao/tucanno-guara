@@ -2,13 +2,15 @@ import { useContext } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Header } from "./core/components/Header";
 import { HeaderContext } from "./core/context/HeaderContext";
+import { HomePage } from "./pages/Home";
+import { AboutPage } from "./pages/About";
 import { AllAnimalsPage } from "./pages/AllAnimals";
 import { AnimalsByClassPage } from "./pages/AnimalsByClass";
-import { HomePage } from "./pages/Home";
 import { SpecificAnimalPage } from "./pages/SpecificAnimal";
 
 const RouteWithHeader = ({ children }: any): JSX.Element => {
-  const { title, subtitle, linkToNavigate, highlight, animal } = useContext(HeaderContext);
+  const { title, subtitle, linkToNavigate, highlight, animal } =
+    useContext(HeaderContext);
 
   return (
     <>
@@ -37,14 +39,14 @@ const AppRoutes = (): JSX.Element => {
           }
         />
 
-        {/* <Route
+        <Route
           path="/sobre"
           element={
             <RouteWithHeader>
-            // about page here
+              <AboutPage />
             </RouteWithHeader>
           }
-        /> */}
+        />
 
         <Route
           path="/animais"
