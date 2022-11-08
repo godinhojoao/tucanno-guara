@@ -1,5 +1,6 @@
 import { Animal } from "./Animal";
 import { AnimalBiomes } from "./AnimalBiomes";
+import { AnimalExtinctionLevels } from "./AnimalExtinctionLevels";
 import { AnimalFoodTypes } from "./AnimalFoodTypes";
 
 export interface SpecificAnimal extends Animal {
@@ -7,13 +8,14 @@ export interface SpecificAnimal extends Animal {
   lifetimeInYears: number;
   foodType: AnimalFoodTypes;
   scientificName: string;
-  isInExtinction: boolean;
   generalDescription: string;
   foodDescription: string;
   reprodutionDescription: string;
   locationDescription: string;
+  whoSearched: string;
+  extinctionLevel: AnimalExtinctionLevels;
+  biomes?: AnimalBiomes[];
 
   // not in use yet
-  biome?: AnimalBiomes;
   mediumHeightMeters?: number;
 }

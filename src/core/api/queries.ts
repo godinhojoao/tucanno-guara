@@ -40,7 +40,7 @@ export const ANIMALS_BY_EACH_CLASS = gql`
 `;
 
 export const SPECIFIC_ANIMAL_BY_ID = gql`
-  query AnimalsByEachClass($id: ID) {
+  query SpecificAnimal($id: ID) {
     animal(where: { id: $id }) {
       id
       popularName
@@ -52,9 +52,11 @@ export const SPECIFIC_ANIMAL_BY_ID = gql`
       generalDescription
       locationDescription
       reprodutionDescription
-      isInExtinction
       mediumHeightMeters
       lifetimeInYears
+      biomes
+      whoSearched
+      extinctionLevel
       mediumWeightKg
     }
   }
