@@ -17,8 +17,8 @@ describe('getCorrectExtinctionLevel', () => {
     expect(getCorrectExtinctionLevel('extintaDaNatureza')).toBe('Extinta da natureza');
   });
 
-  test('given "menosPreocupante" should return "Menos preocupante"', () => {
-    expect(getCorrectExtinctionLevel('menosPreocupante')).toBe('Menos preocupante');
+  test('given "poucoPreocupante" should return "Pouco preocupante"', () => {
+    expect(getCorrectExtinctionLevel('poucoPreocupante')).toBe('Pouco preocupante');
   });
 
   test('given "quaseAmeacada" should return "Quase ameaçada"', () => {

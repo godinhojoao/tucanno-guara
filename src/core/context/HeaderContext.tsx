@@ -5,7 +5,7 @@ import { useHeader } from "./hooks/useHeader";
 const DEFAULT_VALUE = {
   title: "Olá, seja bem vindo ao tucano-guará",
   subtitle:
-    "Este é um site com fins educativos, sinta-se livre para explorar e aprender mais sobre os animais dos biomas brasileiros.",
+    "Este é um site com fins educativos, sinta-se livre para explorar e aprender mais sobre os animais do Bioma Pampa.",
   linkToNavigate: {
     path: "/animais",
     title: "Ver todos os animais",

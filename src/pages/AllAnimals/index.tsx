@@ -11,7 +11,7 @@ const AllAnimalsPage = (): JSX.Element => {
   const allAnimalsHeaderParams: HeaderProps = {
     title: "Conheça os animais do pampa",
     subtitle:
-      "Este é um site com fins educativos, sinta-se livre para explorar e aprender mais sobre os animais dos biomas brasileiros.",
+      "Este é um site com fins educativos, sinta-se livre para explorar e aprender mais sobre os animais do Bioma Pampa.",
   };
   const { data } = animalsApi.animalsByEachClass({ lastCount: 5 });
 

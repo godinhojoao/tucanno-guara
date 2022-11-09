@@ -6,7 +6,7 @@ export function getCorrectExtinctionLevel(extinctionLevel: AnimalExtinctionLevel
     'emPerigo': 'Em perigo',
     'extinta': 'Extinta',
     'extintaDaNatureza': 'Extinta da natureza',
-    'menosPreocupante': 'Menos preocupante',
+    'poucoPreocupante': 'Pouco preocupante',
     'quaseAmeacada': 'Quase ameaçada',
     'vulneravel': 'Vulnerável',
     'dadosInsuficientes': 'Dados insuficientes',

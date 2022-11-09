@@ -12,7 +12,7 @@ const HomePage = (): JSX.Element => {
     title: "Olá, seja bem vindo ao __",
     highlight: "Tucano-guará",
     subtitle:
-      "Este é um site com fins educativos, sinta-se livre para explorar e aprender mais sobre os animais dos biomas brasileiros.",
+      "Este é um site com fins educativos, sinta-se livre para explorar e aprender mais sobre os animais do Bioma Pampa.",
     linkToNavigate: {
       path: "/animais",
       title: "Ver todos os animais",

@@ -1,1 +1,1 @@
-export type AnimalExtinctionLevels = 'criticamenteEmPerigo' | 'dadosInsuficientes' | 'emPerigo' | 'extinta' | 'extintaDaNatureza' | 'menosPreocupante' | 'quaseAmeacada' | 'vulneravel';
+export type AnimalExtinctionLevels = 'criticamenteEmPerigo' | 'dadosInsuficientes' | 'emPerigo' | 'extinta' | 'extintaDaNatureza' | 'poucoPreocupante' | 'quaseAmeacada' | 'vulneravel';
