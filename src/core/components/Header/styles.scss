@@ -6,9 +6,18 @@
   margin-top: 3rem;
   padding-left: 2rem;
 
+  @media only screen and (max-width: map-get($responsive, "sm")) {
+    padding-left: 1rem;
+    width: 100%;
+  }
+
   &__title {
     @extend .main-title;
     max-width: 80%;
+
+    @media only screen and (max-width: map-get($responsive, "sm")) {
+      max-width: 100%;
+    }
 
     &__highlight {
       color: map-get($colors, "secondary");
@@ -17,9 +26,13 @@
 
   &__footer {
     margin-top: 1rem;
-    width: 74%;
+    width: 85%;
     @extend .flex-align-end;
     justify-content: space-between;
+
+    @media only screen and (max-width: map-get($responsive, "md")) {
+      width: calc(100% - 3rem);
+    }
 
     &__paragraph {
       @extend .paragraph;

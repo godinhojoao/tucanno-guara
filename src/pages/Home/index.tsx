@@ -18,7 +18,7 @@ const HomePage = (): JSX.Element => {
       title: "Ver todos os animais",
     },
   };
-  const { data } = animalsApi.loadAnimals({ lastCount: 5 });
+  const { data } = animalsApi.loadAnimals({ lastCount: 6 });
 
   useEffect(() => {
     handleChangeHeader(homeHeaderParams);
@@ -27,11 +27,14 @@ const HomePage = (): JSX.Element => {
   return (
     <main className="home main">
       <div className="home__content main__content">
-        {data?.animals?.length && (
+        {(data?.animals?.length && (
           <div className="home__content__animals">
-            {data.animals.map(animal => <AnimalCard key={animal.id} animal={animal} />)}
+            {data.animals.map((animal) => (
+              <AnimalCard key={animal.id} animal={animal} />
+            ))}
           </div>
-        ) || ''}
+        )) ||
+          ""}
       </div>
     </main>
   );

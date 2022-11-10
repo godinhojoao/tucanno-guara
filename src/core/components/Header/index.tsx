@@ -8,7 +8,7 @@ const Header = (props: HeaderProps): JSX.Element => {
   const [initialTitle, finalTitle] = title.split("__");
 
   return (
-    <header className="header invisible-sm">
+    <header className="header">
       {(highlight && (
         <h1 className="header__title">
           {initialTitle}
