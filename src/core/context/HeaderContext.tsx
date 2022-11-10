@@ -21,7 +21,7 @@ interface HeaderProviderProps {
 
 function HeaderProvider(props: HeaderProviderProps): JSX.Element {
   const { children } = props;
-  const { handleChangeHeader, title, subtitle, highlight, linkToNavigate, animal } = useHeader();
+  const { handleChangeHeader, title, subtitle, highlight, linkToNavigate } = useHeader();
 
   return (
     <HeaderContext.Provider
@@ -30,8 +30,7 @@ function HeaderProvider(props: HeaderProviderProps): JSX.Element {
         title,
         highlight,
         subtitle,
-        linkToNavigate,
-        animal
+        linkToNavigate
       }}
     >
       {children}

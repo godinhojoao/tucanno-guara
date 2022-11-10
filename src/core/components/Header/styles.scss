@@ -11,7 +11,7 @@
     max-width: 80%;
 
     &__highlight {
-      color:  map-get($colors, "secondary");
+      color: map-get($colors, "secondary");
     }
   }
 
@@ -20,17 +20,6 @@
     width: 74%;
     @extend .flex-align-end;
     justify-content: space-between;
-
-    &__animal-info {
-      display: flex;
-      flex-direction: column;
-      grid-gap: .2rem;
-      padding: .5rem 1rem;
-      font-weight: 700;
-      color: #fff;
-      border-radius: 1rem;
-      background-color: map-get($colors, "secondary");
-    }
 
     &__paragraph {
       @extend .paragraph;

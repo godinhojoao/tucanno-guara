@@ -1,13 +1,46 @@
+@import "./../../styles/settings/settings.variables";
+@import "./../../styles/utilities";
+
 .all-animals__content {
   margin-left: 2rem !important;
   display: flex;
   flex-direction: column;
   grid-gap: 1rem;
 
+  @media only screen and (max-width: map-get($responsive, "sm")) {
+    margin-left: 0 !important;
+  }
+
   &__image {
-    height: 8.75rem;
-    width: 8.75rem;
+    width: 100%;
+    height: 16.75rem;
     border-radius: 0.4rem;
+    background: #efbd61;
+    object-position: top;
     object-fit: cover;
+
+    &:hover {
+      cursor: pointer;
+      filter: blur(1.5px);
+    }
+  }
+
+  &__footer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-gap: .4rem;
+    margin-top: 1rem;
+
+    &__animal-info {
+      width: 100%;
+      @extend .flex-align-center;
+      flex-direction: column;
+      padding: 0.5rem 1rem;
+      background-color: map-get($colors, "secondary");
+      border-radius: 1rem;
+      font-weight: 700;
+      color: #fff;
+    }
   }
 }

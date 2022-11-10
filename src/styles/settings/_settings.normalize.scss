@@ -15,8 +15,8 @@ a {
   color: inherit;
   transition: filter 250ms;
 
-  &:hover {
-    filter: brightness(3);
+  &:not([target='__blank']):hover {
+    filter: brightness(2);
   }
 }
 
