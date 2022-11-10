@@ -23,18 +23,17 @@ body,
   color: map-get($colors, "primary-font");
 
   @media only screen and (min-width: map-get($responsive, "sm")) {
-    background-image: url("./../assets/onca.png"), url("./../assets/elipse.svg");
-    background-repeat: no-repeat, no-repeat;
-    background-position-x: -8%, right;
-    background-position-y: top, top;
-    background-attachment: local, local;
-    background-size: 27%, 7%;
+    background: url("./../assets/onca.png");
+    background-repeat: no-repeat;
+    background-position-x: -8%;
+    background-position-y: top;
+    background-attachment: local;
+    background-size: 27%;
     transition: all 250ms ease-in-out;
 
     &.tucano-image {
-      background-image: url("./../assets/tucano.png"),
-        url("./../assets/elipse.svg");
-      background-size: 28%, 7%;
+      background-image: url("./../assets/tucano.png");
+      background-size: 28%;
     }
   }
 }

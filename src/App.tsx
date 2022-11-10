@@ -1,6 +1,8 @@
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import { HeaderProvider } from "./core/context/HeaderContext";
+import { BrowserRouter } from "react-router-dom";
 import { AppRoutes } from "./routes";
+import { Menu } from "./core/components/Menu";
 
 import "./styles/main.scss";
 
@@ -13,7 +15,10 @@ function App(): JSX.Element {
   return (
     <ApolloProvider client={client}>
       <HeaderProvider>
-        <AppRoutes />
+        <BrowserRouter>
+          <Menu />
+          <AppRoutes />
+        </BrowserRouter>
       </HeaderProvider>
     </ApolloProvider>
   );
