@@ -93,13 +93,13 @@ const SpecificAnimalPage = (): JSX.Element => {
             </p>
             {(data.animal.biomes?.length && (
               <p>
-                <strong>Biomas:</strong>:
+                <strong>Biomas</strong>:
                 {formatAnimalBiomes(data.animal.biomes)}
               </p>
             )) ||
               ""}
             <p>
-              <strong>Quem pesquisou o animal:</strong>
+              <strong>Quem pesquisou o animal</strong>:
               {data.animal.whoSearched}
             </p>
           </>
