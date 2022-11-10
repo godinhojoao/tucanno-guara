@@ -1,3 +1,10 @@
+@import "./../../styles/settings/settings.variables";
+
 .all-animals__content {
+  width: 100%;
   margin-left: 2rem !important;
+
+  @media only screen and (max-width: map-get($responsive, "sm")) {
+    margin-left: 0 !important;
+  }
 }

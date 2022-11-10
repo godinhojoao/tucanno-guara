@@ -1,0 +1,47 @@
+@import "./../../../styles/utilities";
+@import "./../../../styles/settings/settings.variables";
+
+.animals-list {
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__navigation-icon {
+      width: 3rem;
+      height: 3rem;
+      display: none;
+
+      @media only screen and (max-width: map-get($responsive, "md")) {
+        display: block;
+      }
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    grid-gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+
+    &--with-limit {
+      grid-template-columns: repeat(4, 1fr) 0.2fr;
+
+      @media only screen and (max-width: map-get($responsive, "md")) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media only screen and (max-width: map-get($responsive, "sm")) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__icon {
+      @media only screen and (max-width: map-get($responsive, "md")) {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { AnimalsList } from "../../core/components/AnimalList";
+import { AnimalsList } from "../../core/components/AnimalsList";
 import { HeaderContext } from "../../core/context/HeaderContext";
 import { getCorrectClassName } from "../../core/shared/getCorrectClassName";
 import { HeaderProps } from "../../core/interfaces/props/HeaderProps";

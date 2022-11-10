@@ -30,22 +30,22 @@ const SpecificAnimalPage = (): JSX.Element => {
   }, [data]);
 
   return (
-    <main className="all-animals main">
-      <div className="all-animals__content main__content">
+    <main className="specific-animal main">
+      <div className="specific-animal__content main__content">
         {(data?.animal && (
           <>
             <a href={data.animal.imageUrl} target="__blank">
               <img
-                className="all-animals__content__image"
+                className="specific-animal__content__image"
                 src={data.animal.imageUrl}
                 alt={data.animal.popularName}
               />
             </a>
-            <footer className="all-animals__content__footer">
+            <footer className="specific-animal__content__footer">
               {data.animal && (
                 <>
                   {data.animal.mediumWeightKg && (
-                    <div className="all-animals__content__footer__animal-info">
+                    <div className="specific-animal__content__footer__animal-info">
                       <span>
                         {formatAnimalWeight(data.animal.mediumWeightKg)}
                       </span>
@@ -53,7 +53,7 @@ const SpecificAnimalPage = (): JSX.Element => {
                     </div>
                   )}
                   {data.animal.lifetimeInYears && (
-                    <div className="all-animals__content__footer__animal-info">
+                    <div className="specific-animal__content__footer__animal-info">
                       <span>
                         {formatAnimalLifetime(data.animal.lifetimeInYears)}
                       </span>
@@ -61,7 +61,7 @@ const SpecificAnimalPage = (): JSX.Element => {
                     </div>
                   )}
                   {data.animal.foodType && (
-                    <div className="all-animals__content__footer__animal-info">
+                    <div className="specific-animal__content__footer__animal-info">
                       <span>
                         {getCorrectFoodTypeName(data.animal.foodType)}
                       </span>

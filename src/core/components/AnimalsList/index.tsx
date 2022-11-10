@@ -11,9 +11,18 @@ const AnimalsList = (props: AnimalsListProps): JSX.Element => {
 
   return (
     <>
-      {animals?.length && (
+      {(animals?.length && (
         <div className="animals-list">
-          <h2 className="subtitle">{title}</h2>
+          <h2 className="animals-list__title subtitle">
+            {title}
+            {withArrow && animals?.length && (
+              <img
+                className="animals-list__title__navigation-icon clickable-icon"
+                src={ChevronSvg}
+                onClick={(): void => navigate(`/animais/${animals[0].class}`)}
+              />
+            )}
+          </h2>
           <div
             className={`animals-list__row ${
               withArrow ? "animals-list__row--with-limit" : ""
@@ -24,14 +33,15 @@ const AnimalsList = (props: AnimalsListProps): JSX.Element => {
             ))}
             {withArrow && animals?.length && (
               <img
-                className="clickable-icon"
+                className="animals-list__row__icon clickable-icon"
                 src={ChevronSvg}
                 onClick={(): void => navigate(`/animais/${animals[0].class}`)}
               />
             )}
           </div>
         </div>
-      ) || ''}
+      )) ||
+        ""}
     </>
   );
 };
