@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "lint": "npx eslint . --ext .ts",
     "lint-fix": "npx eslint . --ext .ts --fix",
-    "test": "jest"
+    "test-unit": "jest"
   },
   "dependencies": {
     "@apollo/client": "^3.6.9",
