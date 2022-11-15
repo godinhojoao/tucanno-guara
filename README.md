@@ -15,8 +15,7 @@
 - [Sass](https://sass-lang.com/)
 - [Jest](https://jestjs.io/docs/getting-started)
 - [Eslint](https://eslint.org)
-
-<!-- - [Husky](https://github.com/typicode/husky) -->
+- [Husky](https://github.com/typicode/husky)
 <!-- - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro) -->
 
 ## Getting Started
