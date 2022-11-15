@@ -1,11 +1,11 @@
 # <a href="https://tucano-guara.netlify.app/">Tucano-guará</a>
 
 - There is a website about the animals of south Brazil that will be used in high school and elementary school biology classes.
-- I developed this website as part of my Technological initiation scholarship at IFSUL - Campus Bagé. All content is managed by a teacher called Aline Jaime Leal who has a master's degree in agricultural microbiology and a doctorate in education and science.
+- I developed this website as part of my Technological initiation scholarship at IFSUL - Campus Bagé. All content is managed by a teacher called Aline Jaime Leal who has a master's degree in agricultural microbiology and a doctorate in education and science. And all design was made by João Augusto an UX/UI designer.
 
 ## What is the backend ?
 
-- A CMS called <a href="https://hygraph.com/">Hygraph</a> that has a free plan with 1 million api calls.
+- A CMS called <a href="https://hygraph.com/">Hygraph</a> that has a free plan with 1 million api calls per month.
 
 ## What I used to develop this frontend ?
 
@@ -16,7 +16,6 @@
 - [Jest](https://jestjs.io/docs/getting-started)
 - [Eslint](https://eslint.org)
 
-<!-- - [Prettier](https://prettier.io) -->
 <!-- - [Husky](https://github.com/typicode/husky) -->
 <!-- - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro) -->
 
