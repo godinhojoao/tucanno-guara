@@ -41,3 +41,6 @@ Open [http://localhost:5173](http://localhost:5173) with your browser to see the
 - `test-unit`: runs jest to run all unitary tests
 
 <p align="center">Made by João Godinho</p>
+
+## Headless CMS presentation in portuguese:
+- https://docs.google.com/presentation/d/e/2PACX-1vRXZFjsDrsi7pMEUUHFtTkhZerjbKshdY1XvUi0i-WN26CBbDyJ7vDSq-6vf8iBVeKslH9_-li2HE9A/pub?start=true&loop=false&delayms=60000
