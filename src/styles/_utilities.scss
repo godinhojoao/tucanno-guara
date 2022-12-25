@@ -12,6 +12,10 @@
 .subtitle {
   font-size: 1.6rem;
   font-weight: 700;
+
+  &--active {
+    filter: invert(1) !important;
+  }
 }
 
 .flex-align-center {

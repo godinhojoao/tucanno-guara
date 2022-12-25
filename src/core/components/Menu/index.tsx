@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import HomeSvg from "./../../../assets/home.svg";
 import AboutSvg from "./../../../assets/info.svg";
 import AllAnimalsSvg from "./../../../assets/pets.svg";
@@ -7,6 +7,7 @@ import AllAnimalsSvg from "./../../../assets/pets.svg";
 import "./styles.scss";
 
 const Menu = (): JSX.Element => {
+  const location = useLocation();
   const [isMenuOpened, setIsMenuOpened] = useState(false);
   const navigate = useNavigate();
 
@@ -37,21 +38,21 @@ const Menu = (): JSX.Element => {
       >
         <ul>
           <li
-            className="subtitle"
+            className={`subtitle ${location.pathname === '/' ? 'subtitle--active' : ''}`}
             onClick={(): void => navigateAndCloseMenu("/")}
           >
             <img src={HomeSvg} />
             <span>Home</span>
           </li>
           <li
-            className="subtitle"
+            className={`subtitle ${location.pathname === '/sobre' ? 'subtitle--active' : ''}`}
             onClick={(): void => navigateAndCloseMenu("/sobre")}
           >
             <img src={AboutSvg} />
             <span>Sobre nós</span>
           </li>
           <li
-            className="subtitle"
+            className={`subtitle ${location.pathname === '/animais'? 'subtitle--active' : ''}`}
             onClick={(): void => navigateAndCloseMenu("/animais")}
           >
             <img src={AllAnimalsSvg} />
