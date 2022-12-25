@@ -16,7 +16,7 @@
 - [Jest](https://jestjs.io/docs/getting-started)
 - [Eslint](https://eslint.org)
 - [Husky](https://github.com/typicode/husky)
-<!-- - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro) -->
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
 
 ## Getting Started
 
@@ -38,7 +38,7 @@ Open [http://localhost:5173](http://localhost:5173) with your browser to see the
 - `build`: creates the production build version
 - `lint`: runs the linter in all components and pages
 - `lint-fix`: fix all linter erros automatically
-- `test-unit`: runs jest to run all unitary tests
+- `test`: runs jest to run all tests
 
 <p align="center">Made by João Godinho</p>
 
