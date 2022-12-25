@@ -7,6 +7,7 @@ import { AboutPage } from "./pages/About";
 import { AllAnimalsPage } from "./pages/AllAnimals";
 import { AnimalsByClassPage } from "./pages/AnimalsByClass";
 import { SpecificAnimalPage } from "./pages/SpecificAnimal";
+import { Footer } from "./core/components/Footer";
 
 
 function AppRoutes(): JSX.Element {
@@ -29,6 +30,7 @@ function AppRoutes(): JSX.Element {
         linkToNavigate={linkToNavigate}
       />
       {routes}
+      <Footer />
     </>
   );
 }
