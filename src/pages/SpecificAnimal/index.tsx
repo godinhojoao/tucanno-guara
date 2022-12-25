@@ -5,16 +5,18 @@ import { formatAnimalBiomes } from "../../core/shared/formatAnimalBiomes";
 import { animalsApi } from "../../core/api/Api";
 import { HeaderProps } from "../../core/interfaces/props/HeaderProps";
 
-import "./styles.scss";
 import { getCorrectExtinctionLevel } from "../../core/shared/getCorrectExtinctionLevel";
 import { formatAnimalWeight } from "../../core/shared/formatAnimalWeight";
 import { formatAnimalLifetime } from "../../core/shared/formatAnimalLifetime";
 import { getCorrectFoodTypeName } from "../../core/shared/getCorrectFoodTypeName";
+import { ErrorContent } from "../../core/components/Error";
+
+import "./styles.scss";
 
 const SpecificAnimalPage = (): JSX.Element => {
   const params = useParams();
   const { handleChangeHeader } = useContext(HeaderContext);
-  const { data } = animalsApi.specificAnimalById(params?.id || "");
+  const { data, error } = animalsApi.specificAnimalById(params?.id || "");
 
   useEffect(() => {
     const rootElement = document.querySelector("#root");
@@ -22,12 +24,16 @@ const SpecificAnimalPage = (): JSX.Element => {
 
     const specificAnimalHeaderParams: HeaderProps = {
       title: "Conheça um pouco mais sobre o(a) __",
-      highlight: data?.animal?.popularName
+      highlight: data?.animal?.popularName,
     };
     handleChangeHeader(specificAnimalHeaderParams);
 
     return (): void => rootElement?.classList.remove("tucano-image");
   }, [data]);
+
+  if (error) {
+    return <ErrorContent />;
+  }
 
   return (
     <main className="specific-animal main">
@@ -93,14 +99,12 @@ const SpecificAnimalPage = (): JSX.Element => {
             </p>
             {(data.animal.biomes?.length && (
               <p>
-                <strong>Biomas</strong>:
-                {formatAnimalBiomes(data.animal.biomes)}
+                <strong>Biomas</strong>:{formatAnimalBiomes(data.animal.biomes)}
               </p>
             )) ||
               ""}
             <p>
-              <strong>Quem pesquisou o animal</strong>:
-              {data.animal.whoSearched}
+              <strong>Quem pesquisou o animal</strong>:{data.animal.whoSearched}
             </p>
           </>
         )) ||

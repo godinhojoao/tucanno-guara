@@ -1,6 +1,7 @@
 import { useContext, useEffect } from "react";
 import { animalsApi } from "../../core/api/Api";
 import { AnimalCard } from "../../core/components/AnimalCard";
+import { ErrorContent } from "../../core/components/Error";
 import { HeaderContext } from "../../core/context/HeaderContext";
 import { HeaderProps } from "../../core/interfaces/props/HeaderProps";
 
@@ -18,11 +19,15 @@ const HomePage = (): JSX.Element => {
       title: "Ver todos os animais",
     },
   };
-  const { data } = animalsApi.loadAnimals({ lastCount: 6 });
+  const { data, error } = animalsApi.loadAnimals({ lastCount: 6 });
 
   useEffect(() => {
     handleChangeHeader(homeHeaderParams);
   }, []);
+
+  if (error) {
+    return <ErrorContent />;
+  }
 
   return (
     <main className="home main">

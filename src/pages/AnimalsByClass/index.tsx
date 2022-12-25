@@ -8,6 +8,7 @@ import { AnimalClasses } from "../../core/interfaces/AnimalClasses";
 
 import "./styles.scss";
 import { animalsApi } from "../../core/api/Api";
+import { ErrorContent } from "../../core/components/Error";
 
 const AnimalsByClassPage = (): JSX.Element => {
   const params = useParams();
@@ -20,7 +21,7 @@ const AnimalsByClassPage = (): JSX.Element => {
       "Este é um site com fins educativos, sinta-se livre para explorar e aprender mais sobre os animais do Bioma Pampa.",
   };
   const { handleChangeHeader } = useContext(HeaderContext);
-  const { data } = animalsApi.loadAnimals({
+  const { data, error } = animalsApi.loadAnimals({
     lastCount: 5,
     animalClass: params.class as AnimalClasses,
   });
@@ -31,6 +32,10 @@ const AnimalsByClassPage = (): JSX.Element => {
     }
     handleChangeHeader(animalsByClassHeaderParams);
   }, []);
+
+  if (error) {
+    return <ErrorContent />;
+  }
 
   return (
     <main className="animals-by-class main">
